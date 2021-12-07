@@ -18,5 +18,6 @@ func main() {
 	router.HandleFunc("/books/{id}", handlers.DeleteBook).Methods(http.MethodDelete)
 
 	log.Println("API is running!")
-	http.ListenAndServe(":4000", router)
+	//http.ListenAndServe(":4000", router)
+	log.Fatal(http.ListenAndServe(":4000", router))
 }
